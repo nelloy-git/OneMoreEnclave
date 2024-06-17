@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://baallw5d73ius"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshGrid" type="GridMap" parent="."]
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+cell_scale = 50.0
+data = {
+"cells": PackedInt32Array(0, 0, 786432, 0, 65535, 786432)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.949486, 0.31381, 0, -0.31381, 0.949486, 0, 0.843613, 2.00005)
