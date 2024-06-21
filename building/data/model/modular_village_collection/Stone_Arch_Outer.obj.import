@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://krxno0gbtw6b"
+path="res://.godot/imported/Stone_Arch_Outer.obj-0ee9ddbe389bff1d59e033c5f9f59a29.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_Arch_Outer.obj-0ee9ddbe389bff1d59e033c5f9f59a29.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Stone_Arch_Outer.obj"
+dest_files=["res://.godot/imported/Stone_Arch_Outer.obj-0ee9ddbe389bff1d59e033c5f9f59a29.mesh", "res://.godot/imported/Stone_Arch_Outer.obj-0ee9ddbe389bff1d59e033c5f9f59a29.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

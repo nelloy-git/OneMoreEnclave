@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://by8o0cslpfcq6"
+path="res://.godot/imported/Waterwheel_Flume_Curved.obj-286896c45fb2538538acb3b5fd960dfe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Waterwheel_Flume_Curved.obj-286896c45fb2538538acb3b5fd960dfe.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Waterwheel_Flume_Curved.obj"
+dest_files=["res://.godot/imported/Waterwheel_Flume_Curved.obj-286896c45fb2538538acb3b5fd960dfe.mesh", "res://.godot/imported/Waterwheel_Flume_Curved.obj-286896c45fb2538538acb3b5fd960dfe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

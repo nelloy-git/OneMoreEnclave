@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnt5j8uvsr6u2"
+path="res://.godot/imported/Prop_Well_Grass.obj-ff23f785174f92876570c5821315a02b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Well_Grass.obj-ff23f785174f92876570c5821315a02b.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Prop_Well_Grass.obj"
+dest_files=["res://.godot/imported/Prop_Well_Grass.obj-ff23f785174f92876570c5821315a02b.mesh", "res://.godot/imported/Prop_Well_Grass.obj-ff23f785174f92876570c5821315a02b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

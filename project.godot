@@ -17,7 +17,12 @@ config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/MeshGridCustom/plugin.cfg")
+enabled=PackedStringArray("res://addons/Primitive3D/plugin.cfg")
+
+[physics]
+
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
 
 [rendering]
 

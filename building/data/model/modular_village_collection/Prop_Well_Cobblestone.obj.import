@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mj7kpo2n5xhm"
+path="res://.godot/imported/Prop_Well_Cobblestone.obj-4f62a9cf23a41fff231cb398d232550e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Well_Cobblestone.obj-4f62a9cf23a41fff231cb398d232550e.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Prop_Well_Cobblestone.obj"
+dest_files=["res://.godot/imported/Prop_Well_Cobblestone.obj-4f62a9cf23a41fff231cb398d232550e.mesh", "res://.godot/imported/Prop_Well_Cobblestone.obj-4f62a9cf23a41fff231cb398d232550e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

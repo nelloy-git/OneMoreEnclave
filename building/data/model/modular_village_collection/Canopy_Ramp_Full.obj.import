@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cu5uvjfhoq3uq"
+path="res://.godot/imported/Canopy_Ramp_Full.obj-6e27a3dea16aaaf6555cef6cd5056511.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Canopy_Ramp_Full.obj-6e27a3dea16aaaf6555cef6cd5056511.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Canopy_Ramp_Full.obj"
+dest_files=["res://.godot/imported/Canopy_Ramp_Full.obj-6e27a3dea16aaaf6555cef6cd5056511.mesh", "res://.godot/imported/Canopy_Ramp_Full.obj-6e27a3dea16aaaf6555cef6cd5056511.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

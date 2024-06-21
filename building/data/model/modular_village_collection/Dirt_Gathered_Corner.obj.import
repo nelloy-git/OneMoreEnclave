@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgm1kysxjaun6"
+path="res://.godot/imported/Dirt_Gathered_Corner.obj-8c8b4f17f8ceae459333f566cfa05c40.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Dirt_Gathered_Corner.obj-8c8b4f17f8ceae459333f566cfa05c40.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Dirt_Gathered_Corner.obj"
+dest_files=["res://.godot/imported/Dirt_Gathered_Corner.obj-8c8b4f17f8ceae459333f566cfa05c40.mesh", "res://.godot/imported/Dirt_Gathered_Corner.obj-8c8b4f17f8ceae459333f566cfa05c40.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

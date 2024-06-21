@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=2 format=3 uid="uid://dohem7vscfcjg"]
+
+[ext_resource type="Script" path="res://building/data/BuildingData.gd" id="1_vn0pe"]
+
+[resource]
+script = ExtResource("1_vn0pe")
+name = "House"
+tile_path = "res://building/data/tile/8x6_ground.png"
+tile_anchor = Vector2i(0, 0)
+model_path = "res://building/data/model/House.tscn"
+model_position = Vector3(0, 0, 0)
+model_rotation = Vector3(0, 0, 0)
+model_scale = Vector3(1, 1, 1)

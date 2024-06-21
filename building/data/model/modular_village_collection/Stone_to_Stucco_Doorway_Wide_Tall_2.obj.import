@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxfluqh5meg3m"
+path="res://.godot/imported/Stone_to_Stucco_Doorway_Wide_Tall_2.obj-bd5119b98bb7755581cb6d38286e1720.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_to_Stucco_Doorway_Wide_Tall_2.obj-bd5119b98bb7755581cb6d38286e1720.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Stone_to_Stucco_Doorway_Wide_Tall_2.obj"
+dest_files=["res://.godot/imported/Stone_to_Stucco_Doorway_Wide_Tall_2.obj-bd5119b98bb7755581cb6d38286e1720.mesh", "res://.godot/imported/Stone_to_Stucco_Doorway_Wide_Tall_2.obj-bd5119b98bb7755581cb6d38286e1720.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

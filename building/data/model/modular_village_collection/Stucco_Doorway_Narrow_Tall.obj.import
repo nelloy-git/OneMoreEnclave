@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bi3i8ff8ofgel"
+path="res://.godot/imported/Stucco_Doorway_Narrow_Tall.obj-4c8cc07ada603656538ea9d1d481ac1c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stucco_Doorway_Narrow_Tall.obj-4c8cc07ada603656538ea9d1d481ac1c.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Stucco_Doorway_Narrow_Tall.obj"
+dest_files=["res://.godot/imported/Stucco_Doorway_Narrow_Tall.obj-4c8cc07ada603656538ea9d1d481ac1c.mesh", "res://.godot/imported/Stucco_Doorway_Narrow_Tall.obj-4c8cc07ada603656538ea9d1d481ac1c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

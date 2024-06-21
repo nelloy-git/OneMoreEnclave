@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diut3pa2gr5vd"
+path="res://.godot/imported/Stone_Pillar_Base.obj-431bfbac74eb0d98d7446e0fe0adec4d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_Pillar_Base.obj-431bfbac74eb0d98d7446e0fe0adec4d.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Stone_Pillar_Base.obj"
+dest_files=["res://.godot/imported/Stone_Pillar_Base.obj-431bfbac74eb0d98d7446e0fe0adec4d.mesh", "res://.godot/imported/Stone_Pillar_Base.obj-431bfbac74eb0d98d7446e0fe0adec4d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

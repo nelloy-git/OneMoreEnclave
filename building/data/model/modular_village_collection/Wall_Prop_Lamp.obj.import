@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt3nil67o3j3n"
+path="res://.godot/imported/Wall_Prop_Lamp.obj-99fbe95f75246298893985db63140ed2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Prop_Lamp.obj-99fbe95f75246298893985db63140ed2.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Wall_Prop_Lamp.obj"
+dest_files=["res://.godot/imported/Wall_Prop_Lamp.obj-99fbe95f75246298893985db63140ed2.mesh", "res://.godot/imported/Wall_Prop_Lamp.obj-99fbe95f75246298893985db63140ed2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

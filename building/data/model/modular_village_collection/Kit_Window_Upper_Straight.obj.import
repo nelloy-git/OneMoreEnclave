@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0mj42ird0bs8"
+path="res://.godot/imported/Kit_Window_Upper_Straight.obj-75265698d9ed7483f2fbcfd5c85262c2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Kit_Window_Upper_Straight.obj-75265698d9ed7483f2fbcfd5c85262c2.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Kit_Window_Upper_Straight.obj"
+dest_files=["res://.godot/imported/Kit_Window_Upper_Straight.obj-75265698d9ed7483f2fbcfd5c85262c2.mesh", "res://.godot/imported/Kit_Window_Upper_Straight.obj-75265698d9ed7483f2fbcfd5c85262c2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

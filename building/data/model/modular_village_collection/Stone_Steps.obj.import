@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://boken70x27r22"
+path="res://.godot/imported/Stone_Steps.obj-480dcf9ff0cb282efdea33e91689912b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_Steps.obj-480dcf9ff0cb282efdea33e91689912b.mesh"]
+
+source_file="res://building/data/model/modular_village_collection/Stone_Steps.obj"
+dest_files=["res://.godot/imported/Stone_Steps.obj-480dcf9ff0cb282efdea33e91689912b.mesh", "res://.godot/imported/Stone_Steps.obj-480dcf9ff0cb282efdea33e91689912b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
