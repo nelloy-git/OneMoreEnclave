@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ya8rahv6dtc8"]
+[gd_scene load_steps=5 format=3 uid="uid://ya8rahv6dtc8"]
 
 [ext_resource type="PackedScene" uid="uid://bq1wyrvc0xn7q" path="res://world/GridPosDetector/GridPosDetector.tscn" id="1_6di2x"]
+[ext_resource type="Script" path="res://MainCamera.gd" id="1_eeeli"]
 [ext_resource type="Script" path="res://world/BuildingPlacer.gd" id="2_a02kj"]
 [ext_resource type="Resource" uid="uid://dohem7vscfcjg" path="res://building/data/House.tres" id="3_r3e8b"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MainCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.949486, 0.31381, 0, -0.31381, 0.949486, 0, 20.5144, 40.102)
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, -33.2879, 20.5144, 32.1447)
+script = ExtResource("1_eeeli")
 
 [node name="GridPosDetector" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_6di2x")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
