@@ -1,0 +1,2 @@
+class_name Primitive3dTriangle
+extends RefCounted

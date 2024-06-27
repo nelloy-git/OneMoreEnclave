@@ -138,4 +138,5 @@ func _createGridMesh() -> MeshInstance3D:
             Vector3(len_x / 2 + 0.5, 0, i),
             draw_grid_color
         );
+
     return grid_inst;
