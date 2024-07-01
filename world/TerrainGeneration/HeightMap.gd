@@ -25,17 +25,6 @@ var _data: Array;
 func at(x: int, y: int) -> float:
     return _data[x][y];
 
-func toPackedData() -> PackedFloat32Array:
-    var arr: PackedFloat32Array = [];
-    arr.resize(width * height);
-
-    var i: int = 0;
-    for y in range(0, height):
-        for x in range(0, width):
-            arr.set(i, at(x, y));
-            i += 1;
-    return arr.duplicate();
-
 func _to_string():
     return "%s{w:%d,h:%d,r:[%d,%d]}" % ["TerrainGeneration_HeightMap", width, height, min_amp, max_amp];
 

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AdditiveExpr" load_steps=2 format=3 uid="uid://clxrsraatlda0"]
+
+[ext_resource type="Script" path="res://src/Utils/AdditiveExpr.cs" id="1_m3eyp"]
+
+[resource]
+script = ExtResource("1_m3eyp")
+Inputs = {
+"x": 2,
+"y": 3.0
+}
+Params = {
+"a": "x*y"
+}
+Return = "a + x"
+ValidateBtn = false

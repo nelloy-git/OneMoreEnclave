@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HeightMap" load_steps=3 format=3 uid="uid://cyre3353jquer"]
+
+[ext_resource type="Script" path="res://world/Island/Generator/Landscape/HeightMap.cs" id="1_1qewl"]
+[ext_resource type="Resource" uid="uid://d1dfexh31q6fl" path="res://world/Island/Generator/Landscape/Processor/Template1.tres" id="1_4b14t"]
+
+[resource]
+script = ExtResource("1_1qewl")
+GenerateBtn = false
+MapSizeX = 16
+MapSizeY = 16
+MinHeight = -1.0
+MaxHeight = 3.0
+Processor = ExtResource("1_4b14t")
