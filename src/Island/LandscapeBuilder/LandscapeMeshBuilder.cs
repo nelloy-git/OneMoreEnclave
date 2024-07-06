@@ -1,5 +1,3 @@
-using System;
-using System.Xml.Linq;
 using Godot;
 
 namespace Island {

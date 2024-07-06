@@ -6,12 +6,10 @@ namespace Utils {
     [Tool]
     [GlobalClass]
     public partial class AdditiveExpr : Resource {
-        // TODO Dictionary with signals
-
         [Export]
-        public Dictionary Inputs = new();
+        public Array<ConstParam> Inputs;
         [Export]
-        public Dictionary Params = new();
+        public Array<AbstractParam> Params;
         [Export]
         public string Return = "0";
 
@@ -19,11 +17,12 @@ namespace Utils {
         public bool ValidateBtn {
             get { return false; }
             set {
-                if (!Engine.IsEditorHint()) {
-                    GD.PushError("Editor only");
+                if (!value) {
                     return;
                 }
-                if (!value) {
+
+                if (!Engine.IsEditorHint()) {
+                    GD.PushError("Editor only");
                     return;
                 }
 
@@ -34,18 +33,37 @@ namespace Utils {
         }
 
         public bool Validate() {
-            if (!(ParseInputs() && ParseParams() && ParseReturn())) {
+            if (!ValidateUniqueNames()) {
+                GD.PushError("ValidateUniqueNames failed");
                 return false;
             }
-            return Execute(Inputs).VariantType != Variant.Type.Nil;
+
+            if (!(ParseParams() && ParseReturn())) {
+                return false;
+            }
+
+            Dictionary test_input = new();
+            foreach (var input in Inputs) {
+                test_input[input.Name] = input.Second;
+            }
+            return Execute(test_input).VariantType != Variant.Type.Nil;
         }
 
-        private bool ParseInputs() {
+        public bool ValidateUniqueNames() {
+            Dictionary set = new();
             foreach (var input in Inputs) {
-                if (input.Key.VariantType != Variant.Type.String) {
-                    GD.PushError("Key requires String instead of ", input.Key);
+                if (set.ContainsKey(input.Name)) {
+                    GD.PushError("Key duplication: ", input.Name);
                     return false;
                 }
+                set.Add(input.Name, true);
+            }
+            foreach (var param in Params) {
+                if (set.ContainsKey(param.Name)) {
+                    GD.PushError("Key duplication: ", param.Name);
+                    return false;
+                }
+                set.Add(param.Name, true);
             }
             return true;
         }
@@ -53,45 +71,29 @@ namespace Utils {
         private bool ParseParams() {
             Array<string> names = new();
             foreach (var input in Inputs) {
-                names.Add(input.Key.AsString());
+                names.Add(input.Name);
             }
 
             _params = new();
             foreach (var param in Params) {
-                if (param.Key.VariantType != Variant.Type.String) {
-                    GD.PushError("Key requires String");
-                    return false;
-                }
-                if (names.Any(name => name == param.Key.AsString())) {
-                    GD.PushError("Key duplication: ", param.Key);
-                    return false;
-                }
-
-                switch (param.Value.VariantType) {
-                    case Variant.Type.Int:
-                        _params[param.Key.AsString()] = param.Value.AsInt64();
+                switch (param) {
+                    case ConstParam p:
+                        _params[param.Name] = p.Second;
                         break;
-
-                    case Variant.Type.Float:
-                        _params[param.Key.AsString()] = param.Value.AsSingle();
-                        break;
-
-                    case Variant.Type.String:
+                    case ExprParam p:
                         Expression expr = new();
-                        var err = expr.Parse(param.Value.AsString(), names.ToArray<string>());
+                        var err = expr.Parse(p.Second, names.ToArray());
                         if (err != Error.Ok) {
-                            GD.PushError(param.Key, ": ", expr.GetErrorText());
+                            GD.PushError(param.Name, ": ", expr.GetErrorText());
                             return false;
                         }
-                        _params[param.Key.AsString()] = expr;
+                        _params[param.Name] = expr;
                         break;
-
                     default:
-                        GD.PushError("Invalid parameter type: ", param.Key);
+                        GD.PushError("Invalid parameter type: ", param.Name);
                         return false;
                 }
-
-                names.Add(param.Key.AsString());
+                names.Add(param.Name);
             }
             return true;
         }
@@ -99,10 +101,10 @@ namespace Utils {
         private bool ParseReturn() {
             Array<string> names = new();
             foreach (var input in Inputs) {
-                names.Add(input.Key.AsString());
+                names.Add(input.Name);
             }
             foreach (var param in Params) {
-                names.Add(param.Key.AsString());
+                names.Add(param.Name);
             }
 
             Expression expr = new();
@@ -118,8 +120,8 @@ namespace Utils {
 
         public Variant Execute(Dictionary inputs) {
             foreach (var required_input in Inputs) {
-                if (!inputs.ContainsKey(required_input.Key)) {
-                    GD.PushError("Key: \"", required_input.Key, "\" is not found");
+                if (!inputs.ContainsKey(required_input.Name)) {
+                    GD.PushError("Key: \"", required_input.Name, "\" is not found");
                     return new Variant();
                 }
             }

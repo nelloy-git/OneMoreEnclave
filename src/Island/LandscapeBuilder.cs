@@ -4,6 +4,8 @@ namespace Island {
     [Tool]
     [GlobalClass]
     public partial class LandscapeBuilder : Node {
+        static private PackedScene LandscapeScene = ResourceLoader.Load<PackedScene>("res://resource/Island/Landscape.tscn");
+
         [Export]
         public bool BuildBtn {
             get { return false; }
@@ -23,10 +25,6 @@ namespace Island {
         public int SizeX = 32;
         [Export]
         public int SizeY = 32;
-        [Export]
-        public float MinHeight = -1.0f;
-        [Export]
-        public float MaxHeight = 5.0f;
 
         [Export]
         public HeightMapBuilder HeightMapBuilder = new HeightMapBuilder();
@@ -40,36 +38,30 @@ namespace Island {
                 return null;
             }
 
-            ArrayMesh mesh = _mesh_builder.Build(height_map);
-            if (mesh == null) {
-                return null;
-            }
+            // ArrayMesh mesh = _mesh_builder.Build(height_map);
+            // if (mesh == null) {
+            //     return null;
+            // }
 
-            Landscape landscape = new();
+            var landscape = LandscapeScene.Instantiate() as Landscape;
             AddChild(landscape);
             landscape.Owner = GetTree().EditedSceneRoot;
-            landscape.Name = "Landscape";
-
-            MeshInstance3D model = new();
-            // landscape.AddChild(model);
-            // model.Owner = GetTree().EditedSceneRoot;
-            model.Name = "Model";
-            model.Mesh = mesh;
-
-            // StaticBody3D collider = new();
-            // collider.Name = "Collider";
-
-            // CollisionShape3D collider_shape = new();
-            // collider.AddChild(collider_shape);
-            // collider_shape.Owner = GetTree().EditedSceneRoot;
-            // collider_shape.Name = "Shape";
-            // collider_shape.Shape = mesh.CreateTrimeshShape();
-
             landscape.HeightMap = height_map;
-            landscape.Model = model;
-            // landscape.Collider = collider;
 
-            return landscape;
+
+
+            // Landscape landscape = new() {
+            //     Name = "Landscape"
+            // };
+            // AddChild(landscape);
+            // landscape.Owner = GetTree().EditedSceneRoot;
+
+            // landscape.HeightMap = height_map;
+            // landscape.Model.Mesh = mesh;
+            // landscape.ColliderShape.Shape = mesh.CreateTrimeshShape();
+
+            // return landscape;
+            return null;
         }
 
         private LandscapeMeshBuilder _mesh_builder = new();

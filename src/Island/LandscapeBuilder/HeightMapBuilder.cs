@@ -18,11 +18,11 @@ namespace Island {
         static private AdditiveExpr GetDefaultExpr() {
             AdditiveExpr expr = new() {
                 Inputs = new() {
-                    {"V", 0},
-                    {"X", 0},
-                    {"Y", 0},
-                    {"W", 1},
-                    {"H", 1}
+                    new() {Name = "V", Second = 0},
+                    new() {Name = "X", Second = 0},
+                    new() {Name = "Y", Second = 0},
+                    new() {Name = "W", Second = 1},
+                    new() {Name = "H", Second = 1}
                 },
                 Params = new(),
                 Return = "0"
