@@ -6,6 +6,7 @@ namespace Island {
     [Tool]
     [GlobalClass]
     public partial class Landscape : Node3D {
+        public const uint CollisionMask = ((uint)1 << 31); 
 
         [Export]
         public HeightMap HeightMap {
@@ -40,6 +41,11 @@ namespace Island {
             get {
                 return _height_map;
             }
+        }
+
+        public override void _Ready() {
+            UpdateChildren();
+            _body.CollisionMask = CollisionMask;
         }
 
         public void UpdateChildren() {

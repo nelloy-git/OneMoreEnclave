@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ya8rahv6dtc8"]
+[gd_scene load_steps=30 format=3 uid="uid://ya8rahv6dtc8"]
 
 [ext_resource type="Script" path="res://MainCamera.gd" id="1_eeeli"]
 [ext_resource type="Script" path="res://src/Island/LandscapeBuilder.cs" id="5_6x780"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://src/Utils/ExprParam.cs" id="7_d8fv0"]
 [ext_resource type="Script" path="res://src/Island/LandscapeBuilder/HeightMapBuilder.cs" id="7_pv6xt"]
 [ext_resource type="PackedScene" uid="uid://dov6ht4hgvi5w" path="res://resource/Island/Landscape.tscn" id="7_tgee8"]
-[ext_resource type="Script" path="res://src/Island/Landscape.cs" id="8_qhdbi"]
 [ext_resource type="Script" path="res://src/Island/LandscapeBuilder/HeightMap.cs" id="9_k1v2q"]
 [ext_resource type="Script" path="res://src/UI/Selector/Selector.cs" id="10_y8akj"]
 
@@ -123,8 +122,7 @@ SizeX = 256
 SizeY = 256
 HeightMapBuilder = SubResource("Resource_23fay")
 
-[node name="Landscape" type="Node3D" parent="LandscapeBuilder" instance=ExtResource("7_tgee8")]
-script = ExtResource("8_qhdbi")
+[node name="Landscape" parent="LandscapeBuilder" instance=ExtResource("7_tgee8")]
 HeightMap = SubResource("Resource_udpji")
 
 [node name="Node3D" type="Node3D" parent="." node_paths=PackedStringArray("Mark")]
