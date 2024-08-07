@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b622q3uuuprgp"]
+
+[ext_resource type="Script" path="res://src/Island/Island.cs" id="1_63eux"]
+[ext_resource type="PackedScene" uid="uid://rasd7hwp83js" path="res://src/Island/Landscape.tscn" id="2_cwpua"]
+
+[node name="Island" type="Node3D" node_paths=PackedStringArray("Landscape")]
+script = ExtResource("1_63eux")
+Landscape = NodePath("Landscape")
+
+[node name="Landscape" parent="." instance=ExtResource("2_cwpua")]
+HeightMap = null

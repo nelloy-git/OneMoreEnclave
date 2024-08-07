@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgd8lq6etownm"]
+
+[ext_resource type="Script" path="res://src/Event/EventHandler.cs" id="1_k5gev"]
+[ext_resource type="Script" path="res://src/Event/CursorDetector.cs" id="3_ee6q2"]
+
+[node name="EventHandler" type="Node" node_paths=PackedStringArray("CursorDetector")]
+script = ExtResource("1_k5gev")
+CursorDetector = NodePath("CursorDetector")
+
+[node name="CursorDetector" type="Node3D" parent="."]
+script = ExtResource("3_ee6q2")

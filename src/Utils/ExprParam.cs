@@ -10,7 +10,7 @@ namespace Utils {
             set { _name = value; }
         }
         [Export]
-        public string Second;
+        public string Value;
 
         private string _name;
     }

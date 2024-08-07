@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://2ywnvo10djjb"]
+
+[ext_resource type="Script" path="res://src/UI/LoadingScreen.cs" id="1_ytqji"]
+
+[node name="LoadingScreen" type="Control" node_paths=PackedStringArray("ProgressBar")]
+layout_mode = 3
+anchor_right = 1.667
+anchor_bottom = 1.667
+offset_right = -769.384
+offset_bottom = -431.216
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ytqji")
+ProgressBar = NodePath("ProgressBar")
+ScenePath = "res://Main.tscn"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 15.0
+offset_top = 581.0
+offset_right = 1137.0
+offset_bottom = 645.0

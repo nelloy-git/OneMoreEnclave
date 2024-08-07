@@ -7,13 +7,6 @@ namespace Utils {
     [GlobalClass]
     public partial class AdditiveExpr : Resource {
         [Export]
-        public Array<ConstParam> Inputs;
-        [Export]
-        public Array<AbstractParam> Params;
-        [Export]
-        public string Return = "0";
-
-        [Export]
         public bool ValidateBtn {
             get { return false; }
             set {
@@ -21,16 +14,21 @@ namespace Utils {
                     return;
                 }
 
-                if (!Engine.IsEditorHint()) {
-                    GD.PushError("Editor only");
-                    return;
-                }
-
                 if (Validate()) {
                     GD.Print("Validation successful");
                 }
+                else {
+                    GD.Print("Validation failed");
+                }
             }
         }
+
+        [Export]
+        public Array<ConstParam> Inputs;
+        [Export]
+        public Array<AbstractParam> Params;
+        [Export]
+        public string Return = "0";
 
         public bool Validate() {
             if (!ValidateUniqueNames()) {
@@ -44,7 +42,7 @@ namespace Utils {
 
             Dictionary test_input = new();
             foreach (var input in Inputs) {
-                test_input[input.Name] = input.Second;
+                test_input[input.Name] = input.Value;
             }
             return Execute(test_input).VariantType != Variant.Type.Nil;
         }
@@ -78,11 +76,11 @@ namespace Utils {
             foreach (var param in Params) {
                 switch (param) {
                     case ConstParam p:
-                        _params[param.Name] = p.Second;
+                        _params[param.Name] = p.Value;
                         break;
                     case ExprParam p:
                         Expression expr = new();
-                        var err = expr.Parse(p.Second, names.ToArray());
+                        var err = expr.Parse(p.Value, names.ToArray());
                         if (err != Error.Ok) {
                             GD.PushError(param.Name, ": ", expr.GetErrorText());
                             return false;
@@ -155,6 +153,10 @@ namespace Utils {
             if (_return.HasExecuteFailed()) {
                 GD.PushError("Can not evaluate \"Return\": ", _return.GetErrorText());
                 return new Variant();
+            }
+
+            if (result.VariantType != Variant.Type.Int && result.VariantType != Variant.Type.Float) {
+                GD.PushError("Invalid result type: ", result, "(", result.VariantType, ")\nInput: ", inputs);
             }
 
             return result;
